@@ -4,17 +4,17 @@
 Search related functions
 */
 
-let submitTimer, submitInterval, intervals = 1;
-let queryElement = document.getElementById("query");
-let autoSearchEnabled = "<%= Sail.configuration.enable_search_auto_submit %>";
-let progress = document.getElementById("search-submit-progress");
-let sortMenu = document.getElementById("sort-menu");
-let orderButton = document.getElementById("btn-order");
-let profilesMenu = document.getElementById("profiles-modal");
-let profilesButton = document.getElementById("btn-profiles");
-let dashboardBody = document.getElementById("settings-dashboard");
-let guideButton = document.getElementById("btn-guide");
-let guide = document.getElementById("guide-modal");
+var submitTimer, submitInterval, intervals = 1;
+var queryElement = document.getElementById("query");
+var autoSearchEnabled = "<%= Sail.configuration.enable_search_auto_submit %>";
+var progress = document.getElementById("search-submit-progress");
+var sortMenu = document.getElementById("sort-menu");
+var orderButton = document.getElementById("btn-order");
+var profilesMenu = document.getElementById("profiles-modal");
+var profilesButton = document.getElementById("btn-profiles");
+var dashboardBody = document.getElementById("settings-dashboard");
+var guideButton = document.getElementById("btn-guide");
+var guide = document.getElementById("guide-modal");
 
 function submitSearch() {
     document.getElementById("search-form").submit();
@@ -59,7 +59,7 @@ function toggleModal(modal) {
 }
 
 function handleGenericClick(event) {
-    let target = event.target;
+    var target = event.target;
 
     if (orderButton !== null && (target === sortMenu || sortMenu.contains(target) || target === orderButton || orderButton.contains(target))) {
         return;
@@ -107,10 +107,10 @@ document.addEventListener("keydown", closeAllModals);
 Refresh related functions
  */
 
-let refreshButtons = document.getElementsByClassName("refresh-button");
+var refreshButtons = document.getElementsByClassName("refresh-button");
 
 function refreshClick() {
-    let button = this;
+    var button = this;
 
     if (!button.className.includes("active")) {
         button.classList.add("active");
